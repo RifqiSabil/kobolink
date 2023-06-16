@@ -15,19 +15,22 @@
 }
 
 .container{
-    width: 100%;
-    height: 100vh;
+    min-width: 100vw;
+    width: auto;
+    min-height: 100vh;
+    height: auto;
     background-color: var(--bg-primary);
 }
 
 .wrapper{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center; /* isi konten wrapper akan ke tengah */ 
-    width: 100%;
-    height: auto;
+    align-items: center;
 }
 
 .card{
+    max-width: 40%;
     border: 1px solid white;
     background-color: var(--bg-secondary);
     color: var(--txt-secondary);
@@ -75,6 +78,7 @@
 
 .imgaud{
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100vw;
     
@@ -85,6 +89,7 @@
     margin-left: 0px;
     margin-right: 0px;
     width: 700px;
+    max-width: 75vw;
 }
 
 .button{
@@ -92,7 +97,7 @@
     margin-left: 0px;
     margin-right: 0px;
     height:50px;
-    width: 300px;
+    width: 250px;
     font-size: 1.5em;
     cursor: pointer;
     color: var(--card-shadow);
@@ -112,4 +117,31 @@
     color:var(--bg-secondary);
     transform: rotate(-3deg);
     transition: .3s ease-in-out;   
+}
+
+@media screen and  (max-width: 500px){
+    .title{
+        font-size: 14px;
+    }
+    .desc{
+        font-size: 8px;
+    }
+    .card{
+        width: 20vw;
+        padding: 15px;
+        margin: 5px;
+        height: 18vh;
+        margin-bottom: 50px;
+        margin-top: 100px;
+    }
+    .btn{
+        margin-top: 5px;
+        padding: 8px;
+        font-size: 11px;
+    }
+    .button{
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 50vw;
+    }
 }
